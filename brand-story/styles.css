@@ -9,20 +9,37 @@
   --radius2: 30px;
   --max: 1120px;
 }
-/* ===== Theme tokens (A/B/C/D) ===== */
+/* =========================
+   THEME TOKENS (A/B/C/D)
+   ========================= */
 :root{
-  --accent: #4fd1c5;
+  --accent:#4fd1c5;
   --accent2:#60a5fa;
+
+  /* 你原本的底色若已有 --bg，就保留；沒有也沒關係 */
+  --bg: #0b1220;
 }
 
-/* A: OEM 工廠 */
+/* A: OEM 工廠（綠） */
 body[data-theme="a"]{ --accent:#22c55e; --accent2:#a3e635; }
-/* B: 品牌形象 */
+/* B: 品牌形象（紫粉） */
 body[data-theme="b"]{ --accent:#a855f7; --accent2:#f472b6; }
-/* C: 業務提案 */
+/* C: 業務提案（藍青） */
 body[data-theme="c"]{ --accent:#3b82f6; --accent2:#06b6d4; }
-/* D: MVP 驗證 */
+/* D: MVP 驗證（橘紅） */
 body[data-theme="d"]{ --accent:#f59e0b; --accent2:#fb7185; }
+
+/* =========================
+   BACKGROUND TINT (避免單一暗色)
+   貼一次就能看到「氛圍色」差異
+   ========================= */
+body{
+  background:
+    radial-gradient(900px 560px at 18% 16%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 60%),
+    radial-gradient(900px 560px at 82% 18%, color-mix(in srgb, var(--accent2) 10%, transparent), transparent 60%),
+    var(--bg);
+}
+
 
 *{box-sizing:border-box}
 html,body{height:100%}
