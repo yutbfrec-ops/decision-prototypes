@@ -8,6 +8,21 @@
   --r: 18px;
   --max: 980px;
 }
+/* ===== Theme tokens (A/B/C/D) ===== */
+:root{
+  --accent: #4fd1c5;
+  --accent2:#60a5fa;
+}
+
+/* A: OEM 工廠 */
+body[data-theme="a"]{ --accent:#22c55e; --accent2:#a3e635; }
+/* B: 品牌形象 */
+body[data-theme="b"]{ --accent:#a855f7; --accent2:#f472b6; }
+/* C: 業務提案 */
+body[data-theme="c"]{ --accent:#3b82f6; --accent2:#06b6d4; }
+/* D: MVP 驗證 */
+body[data-theme="d"]{ --accent:#f59e0b; --accent2:#fb7185; }
+
 *{box-sizing:border-box}
 body{
   margin:0;
