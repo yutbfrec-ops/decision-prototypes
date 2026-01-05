@@ -12,20 +12,37 @@
   --radius2:26px;
   --max:1100px;
 }
-/* ===== Theme tokens (A/B/C/D) ===== */
+/* =========================
+   THEME TOKENS (A/B/C/D)
+   ========================= */
 :root{
-  --accent: #4fd1c5;
+  --accent:#4fd1c5;
   --accent2:#60a5fa;
+
+  /* 你原本的底色若已有 --bg，就保留；沒有也沒關係 */
+  --bg: #0b1220;
 }
 
-/* A: OEM 工廠 */
+/* A: OEM 工廠（綠） */
 body[data-theme="a"]{ --accent:#22c55e; --accent2:#a3e635; }
-/* B: 品牌形象 */
+/* B: 品牌形象（紫粉） */
 body[data-theme="b"]{ --accent:#a855f7; --accent2:#f472b6; }
-/* C: 業務提案 */
+/* C: 業務提案（藍青） */
 body[data-theme="c"]{ --accent:#3b82f6; --accent2:#06b6d4; }
-/* D: MVP 驗證 */
+/* D: MVP 驗證（橘紅） */
 body[data-theme="d"]{ --accent:#f59e0b; --accent2:#fb7185; }
+
+/* =========================
+   BACKGROUND TINT (避免單一暗色)
+   貼一次就能看到「氛圍色」差異
+   ========================= */
+body{
+  background:
+    radial-gradient(900px 560px at 18% 16%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 60%),
+    radial-gradient(900px 560px at 82% 18%, color-mix(in srgb, var(--accent2) 10%, transparent), transparent 60%),
+    var(--bg);
+}
+
 
 *{box-sizing:border-box}
 html,body{height:100%}
@@ -257,4 +274,36 @@ a{color:inherit; text-decoration:none}
   .tile{grid-column: span 12}
   .split{grid-template-columns: 1fr}
   .navLinks{display:none}
+}
+/* =========================
+   ACCENT HOOKS
+   ========================= */
+
+/* Buttons */
+.btn,
+button{
+  border-color: color-mix(in srgb, var(--accent) 28%, white 0%);
+}
+.btn:hover,
+button:hover{
+  border-color: color-mix(in srgb, var(--accent) 55%, white 0%);
+}
+
+/* Pills / tags（如果你沒有 .pill 也沒關係，不影響） */
+.pill,
+.tag,
+.badge{
+  border-color: color-mix(in srgb, var(--accent) 35%, white 0%);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+/* Section title underline（如果你有 .section__title 就會吃到） */
+.section__title::after{
+  content:"";
+  display:block;
+  width:56px;
+  height:2px;
+  margin-top:10px;
+  background: color-mix(in srgb, var(--accent) 75%, transparent);
+  border-radius:999px;
 }
