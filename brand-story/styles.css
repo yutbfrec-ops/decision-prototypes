@@ -295,3 +295,7 @@ button:hover{
   border-radius:999px;
 }
 
+
+
+/* THEME OVERRIDE (added) */
+body{background: var(--page-bg) !important;}

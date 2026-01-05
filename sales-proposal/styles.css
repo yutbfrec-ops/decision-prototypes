@@ -273,3 +273,7 @@ button:hover{
 }
 
 
+
+
+/* THEME OVERRIDE (added) */
+body{background: var(--page-bg) !important;}

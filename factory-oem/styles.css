@@ -341,3 +341,7 @@ button:hover{
   background: color-mix(in srgb, var(--accent) 75%, transparent);
   border-radius:999px;
 }
+
+
+/* THEME OVERRIDE (added) */
+body{background: var(--page-bg) !important;}
