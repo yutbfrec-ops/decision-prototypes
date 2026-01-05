@@ -1,3 +1,37 @@
+/* ===== Page Theme Control ===== */
+
+body.theme-a {
+  --page-bg: linear-gradient(135deg, #0e2a1f, #0b1410);
+  --accent: #3fbf7f;
+}
+
+body.theme-b {
+  --page-bg: linear-gradient(135deg, #221833, #120c1f);
+  --accent: #8b6cff;
+}
+
+body.theme-c {
+  --page-bg: linear-gradient(135deg, #0f2235, #08121e);
+  --accent: #4fa3ff;
+}
+
+body.theme-d {
+  --page-bg: linear-gradient(135deg, #2a1f12, #14100b);
+  --accent: #ffb84d;
+}
+
+/* 套用到整頁 */
+body {
+  background: var(--page-bg);
+}
+
+/* 套用到標籤 / 按鈕 / 重點 */
+.badge,
+.button-primary {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 :root{
   --bg:#0b0f14;
   --panel: rgba(18,24,32,.55);
