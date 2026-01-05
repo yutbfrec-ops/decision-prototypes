@@ -1,28 +1,6 @@
 <!doctype html>
 <html lang="zh-Hant">
 
-  <style>
-/* ===== Catalog cards theme ===== */
-.demoCard.theme-a{ --accent:#22c55e; --accent2:#a3e635; }
-.demoCard.theme-b{ --accent:#a855f7; --accent2:#f472b6; }
-.demoCard.theme-c{ --accent:#3b82f6; --accent2:#06b6d4; }
-.demoCard.theme-d{ --accent:#f59e0b; --accent2:#fb7185; }
-
-.demoCard{
-  background:
-    radial-gradient(520px 260px at 18% 12%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 60%),
-    radial-gradient(520px 260px at 82% 18%, color-mix(in srgb, var(--accent2) 14%, transparent), transparent 60%),
-    rgba(18,24,32,.44);
-  border-color: color-mix(in srgb, var(--accent) 22%, white 0%);
-}
-
-.demoCard .btn{
-  border-color: color-mix(in srgb, var(--accent) 45%, white 0%);
-}
-.demoCard .btn:hover{
-  border-color: color-mix(in srgb, var(--accent) 65%, white 0%);
-}
-</style>
 
   
   <head>
@@ -206,7 +184,30 @@
       .subtitle{max-width: 100%}
     }
   </style>
-</head>
+  <style>
+/* ===== Catalog cards theme ===== */
+.demoCard.theme-a{ --accent:#22c55e; --accent2:#a3e635; }
+.demoCard.theme-b{ --accent:#a855f7; --accent2:#f472b6; }
+.demoCard.theme-c{ --accent:#3b82f6; --accent2:#06b6d4; }
+.demoCard.theme-d{ --accent:#f59e0b; --accent2:#fb7185; }
+
+.demoCard{
+  background:
+    radial-gradient(520px 260px at 18% 12%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 60%),
+    radial-gradient(520px 260px at 82% 18%, color-mix(in srgb, var(--accent2) 14%, transparent), transparent 60%),
+    rgba(18,24,32,.44);
+  border-color: color-mix(in srgb, var(--accent) 22%, white 0%);
+}
+
+.demoCard .btn{
+  border-color: color-mix(in srgb, var(--accent) 45%, white 0%);
+}
+.demoCard .btn:hover{
+  border-color: color-mix(in srgb, var(--accent) 65%, white 0%);
+}
+</style>
+
+  </head>
 
 <body>
   <div class="wrap">
@@ -296,4 +297,5 @@
   </script>
 </body>
 </html>
+
 
